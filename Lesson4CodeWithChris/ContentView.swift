@@ -10,12 +10,58 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ZStack {
+                
+                Spacer()
+                
+                Image("toronto")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
+                    .padding()
+                
+                
+                Spacer()
+                
+                VStack {
+                    Text("CN Tower")
+                        .font(.largeTitle)
+                    Text("Toronto")
+                        .font(.subheadline)
+                }
+                .padding()
+                .background(Color.black)
+                .opacity(0.7)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+            }
+            
+            ZStack {
+                
+                Spacer()
+                
+                Image("london")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
+                    .padding()
+                
+                
+                Spacer()
+                
+                VStack {
+                    Text("Big Ben")
+                        .font(.largeTitle)
+                    Text("London")
+                        .font(.subheadline)
+                }
+                .padding()
+                .background(Color.black)
+                .opacity(0.7)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+            }
         }
-        .padding()
     }
 }
 
